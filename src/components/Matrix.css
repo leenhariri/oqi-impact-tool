@@ -1,0 +1,76 @@
+.matrix-wrapper {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.matrix-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.matrix-table th,
+.matrix-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 50px;
+  max-width: 80px;
+  height: 50px;
+  font-size: 14px;
+}
+
+.fixed-header {
+  background-color: #0D2F52;
+  color: white;
+  font-weight: bold;
+}
+
+.row-label {
+  background-color: #F2F2F2;
+  font-weight: bold;
+}
+
+.sum-cell {
+  background-color: #E3F2FD;
+  font-weight: bold;
+}
+
+.matrix-cell {
+  transition: background-color 0.2s ease;
+}
+
+.legend {
+  margin-top: 30px;
+}
+
+.legend h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.legend ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.legend li {
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.legend li span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid #333;
+}

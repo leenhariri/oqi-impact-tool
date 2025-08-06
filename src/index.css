@@ -1,0 +1,92 @@
+/* src/index.css */
+
+/* ───────────────────────────────────────────────────────────
+   OQI/CERN theme tokens
+───────────────────────────────────────────────────────────── */
+/* ───────────────────────────────────────────────────────────
+   include padding/border in element widths
+───────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* OQI/CERN theme tokens */
+:root {
+  --oqi-primary:   #00274C;
+  --oqi-accent:    #E74C3C;
+  --oqi-bg:        #FFF;
+  --oqi-bg-light:  #F7F7F7;
+  --oqi-font:      "IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+}
+
+/* global reset & base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--oqi-font);
+  color: var(--oqi-primary);
+  background: var(--oqi-bg);
+}
+
+/* table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--oqi-bg-light);
+  margin-bottom: 1rem;
+}
+th {
+  background: var(--oqi-primary);
+  color: #fff;
+  padding: .75rem;
+  text-align: left;
+}
+td {
+  border: 1px solid #DDD;
+  padding: .5rem;
+}
+input, select, textarea {
+  width: 100%;
+  padding: .4rem;
+  border: 1px solid var(--oqi-primary);
+  border-radius: 4px;
+  font-family: var(--oqi-font);
+  color: var(--oqi-primary);
+  background: #FFF;
+}
+
+/* button styling */
+button {
+  background: var(--oqi-accent);
+  color: #fff;
+  border: none;
+  padding: .6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--oqi-font);
+}
+button:hover { opacity: .9; }
+
+/* ───────────────────────────────────────────────────────────
+   React‑Flow overrides to match OQI theme
+───────────────────────────────────────────────────────────── */
+/* node */
+.react-flow__node-default {
+  background: var(--oqi-bg);
+  border: 2px solid var(--oqi-primary);
+  color: var(--oqi-primary);
+  border-radius: 4px;
+  font-weight: 600;
+  padding: .5rem;
+  font-family: var(--oqi-font);
+}
+/* edge path */
+.react-flow__edge-path {
+  stroke: var(--oqi-primary) !important;
+  stroke-width: 2 !important;
+}
+/* arrowheads */
+.react-flow__marker-arrowclosed {
+  fill: var(--oqi-primary) !important;
+}

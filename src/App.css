@@ -1,0 +1,271 @@
+/* App.css */
+
+#root {
+  padding: 2rem 1rem;
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #FFF;
+  color: #00274C;
+  overflow-x: hidden;
+}
+
+/* ============ TABLE WRAPPER ============ */
+.table-card {
+  background: #F7F7F7;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  overflow-x: auto;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.table-card:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ============ TABLE ============ */
+.indicator-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  table-layout: fixed;
+  background: #F7F7F7;
+}
+
+/* ============ TABLE HEADERS ============ */
+.indicator-table thead th {
+  background-color: #00274C;
+  color: white;
+  padding: 12px 8px;
+  font-weight: bold;
+  text-align: left;
+  font-size: 13px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 2px solid #ccc;
+}
+
+.indicator-table thead th:first-child {
+  border-top-left-radius: 12px;
+}
+.indicator-table thead th:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* ============ TABLE ROWS ============ */
+.indicator-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+.indicator-table tbody tr:nth-child(odd) {
+  background-color: #F0F2F5;
+  transition: background-color 0.2s ease;
+}
+
+.indicator-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+/* ============ INPUTS INSIDE CELLS ============ */
+.indicator-table input,
+.indicator-table select,
+.indicator-table textarea {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: white;
+  transition: border 0.2s ease;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ============ BUTTONS ============ */
+button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-family: 'IBM Plex Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #800080;
+  color: white;
+  box-shadow: 0 4px 8px rgba(128, 0, 128, 0.3);
+}
+
+button:hover {
+  background-color: #6A0DAD;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(106, 13, 173, 0.4);
+}
+
+.add-button,
+.remove-button,
+.primary-button {
+  background-color: #800080;
+  color: white;
+}
+
+.add-button:hover,
+.remove-button:hover,
+.primary-button:hover {
+  background-color: #6A0DAD;
+}
+
+/* ============ SDG TARGET DROPDOWN ============ */
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-button {
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: white;
+  font-size: 12px;
+  text-align: left;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dropdown-button:hover {
+  border-color: #800080;
+  box-shadow: 0 0 6px rgba(128, 0, 128, 0.2);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  background-color: white;
+  z-index: 10;
+  font-size: 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  display: block;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.dropdown-item input {
+  margin-right: 6px;
+}
+
+/* ============ RESPONSIVENESS ============ */
+@media screen and (max-width: 1200px) {
+  .indicator-table {
+    table-layout: auto;
+  }
+
+  .indicator-table th, .indicator-table td {
+    font-size: 12px;
+  }
+
+  .dropdown-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #root {
+    padding: 1rem 0.5rem;
+  }
+
+  .add-button, .remove-button, button.primary-button {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+/* ====== Diagram Fullscreen Fix and Button Improvements ====== */
+.diagram-wrapper {
+  height: calc(100vh - 200px); /* Adjust to screen height */
+  border: 1px solid #DDD;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Clear Button in Top-Right */
+.clear-arrows-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  padding: 6px 12px;
+  font-size: 12px;
+  background-color: #800080;
+  color: white;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(128, 0, 128, 0.3);
+  transition: all 0.2s ease;
+}
+
+.clear-arrows-btn:hover {
+  background-color: #6A0DAD;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(106, 13, 173, 0.4);
+}
+
+/* Modern Node Box Styling */
+.custom-node {
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  font-weight: 500;
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.custom-node:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: white; /* fallback */
+  color: #00274C;
+  border: 1px solid #ccc;
+  min-width: 120px;
+  text-align: center;
+}
+
+.custom-node-label {
+  font-size: 13px;
+  text-align: center;
+  padding: 2px 4px;
+}
+
