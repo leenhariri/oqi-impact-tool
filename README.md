@@ -1,12 +1,51 @@
-# React + Vite
+#  OQI Impact Tool 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic Theory of Change and SDG Mapping tool built for the Open Quantum Institute (OQI) Hackathon.
 
-Currently, two official plugins are available:
+##  Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-  **Theory of Change Input Table** – Add activities, outputs, impacts, assumptions, etc.
+-  **Auto-Generated Diagram** – Interactive diagram with arrows, colors, and drag support.
+-  **SDG Matrix Builder** – Map indicators to SDG targets with impact scores.
+-  **Export to PDF** – One-click export of the diagram as a PDF file.
 
-## Expanding the ESLint configuration
+##  Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** – Frontend framework
+- **React Flow** – For the interactive diagram
+- **html2canvas** + **jsPDF** – PDF export
+- **Custom CSS** – Styled to match OQI branding
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the app locally
+
+```bash
+npm start
+```
+
+Then visit: [http://localhost:5173](http://localhost:5173)
+
+---
+
+##  Notes
+
+> This tool was designed as a prototype for possible integration into the [OQI Website](https://open-quantum-institute.cern/).  
+
+
+
